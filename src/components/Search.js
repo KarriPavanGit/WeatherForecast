@@ -35,6 +35,27 @@ const Search = ({ onSearchChange }) => {
       value={search}
       onChange={handleOnChange}
       loadOptions={loadOptions}
+      styles={{
+        control: (base) => ({
+          ...base,
+          backgroundColor: "white",
+          color: "black", // Text color for the search input
+        }),
+        menu: (base) => ({
+          ...base,
+          backgroundColor: "white", // Background color for the dropdown
+        }),
+        option: (base, state) => ({
+          ...base,
+          backgroundColor: state.isSelected ? "#4A90E2" : "white", // Highlight selected option
+          color: state.isSelected ? "white" : "black", // Text color for selected option
+          cursor: "pointer",
+        }),
+        singleValue: (base) => ({
+          ...base,
+          color: "black", // Text color for the selected value
+        }),
+      }}
     />
   );
 };
