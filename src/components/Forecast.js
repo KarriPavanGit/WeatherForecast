@@ -79,7 +79,6 @@ const Forecast = ({ data }) => {
     </Accordion>
   </div>
 </div>
-
   );
 };
 
